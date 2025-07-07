@@ -28,6 +28,8 @@ See [`../docs/RUNNING_FULLSTACK.md`](../docs/RUNNING_FULLSTACK.md) for how to ru
   `make docker-down`
 - **Integration tests:**  
   `make itest`
+- **Run DB migrations:**  
+  Migrations run automatically when the server starts. The backend uses an embedded migration system that applies SQL files from the `internal/database/migrations` directory in order.
 
 ### Environment
 
