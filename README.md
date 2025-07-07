@@ -46,15 +46,15 @@ The frontend will be available at http://localhost:4200
 ## Features
 
 ### Search Functionality
-![Search Feature](./docs/images/Screenshot%20from%202025-07-07%2004-14-53.png)
+![Search Feature](./docs/images/Screenshot%20from%202025-07-07%2004-15-19.png)
 *Screenshot: Searching for blog posts with real-time results*
 
 ### Responsive Design
-![Responsive Design](./docs/images/Screenshot%20from%202025-07-07%2004-14-59.png)
+![Responsive Design](./docs/images/image.png)
 *Screenshot: The blog application on mobile and desktop views*
 
 ### Post Management
-![Post Editor](./docs/images/Screenshot%20from%202025-07-07%2004-15-30.png)
+![Post Editor](./docs/images/Screenshot%20from%202025-07-07%2004-14-53.png)
 *Screenshot: Creating and editing blog posts with rich text editor*
 
 Additional features:
