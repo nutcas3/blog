@@ -1,0 +1,28 @@
+/* Custom styling for the form */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+/* Style for the textarea to allow resizing */
+textarea.resize-y {
+  min-height: 200px;
+}
+
+/* Button with spinner alignment */
+button mat-spinner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Card styling */
+form {
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
