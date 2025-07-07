@@ -1,0 +1,51 @@
+<header class="bg-gray-200 p-2">
+  <div class="flex justify-between items-center">
+    <div class="flex items-center">
+      <div class="mr-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" class="inline-block">
+          <rect x="2" y="2" width="6" height="6" fill="#333"></rect>
+          <rect x="10" y="2" width="6" height="6" fill="#333"></rect>
+          <rect x="18" y="2" width="4" height="6" fill="#333"></rect>
+          <rect x="2" y="10" width="6" height="6" fill="#333"></rect>
+          <rect x="10" y="10" width="6" height="6" fill="#333"></rect>
+          <rect x="18" y="10" width="4" height="6" fill="#333"></rect>
+          <rect x="2" y="18" width="6" height="4" fill="#333"></rect>
+          <rect x="10" y="18" width="6" height="4" fill="#333"></rect>
+          <rect x="18" y="18" width="4" height="4" fill="#333"></rect>
+        </svg>
+      </div>
+      <a routerLink="/" class="text-xl font-bold">Blog</a>
+    </div>
+    
+    <div class="flex items-center">
+
+             <!-- <div class="relative mr-2">
+          <input placeholder="Text" class="border rounded px-2 py-1 w-32">
+          <button class="absolute right-1 top-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+        </div> -->
+      <!-- Search Form with Angular Material -->
+      <form (ngSubmit)="onSearch()" class="mr-2 flex items-center bg-white rounded px-2 py-1">
+        <input 
+          type="text" 
+          name="searchQuery"
+          [(ngModel)]="searchQuery" 
+          placeholder="Search posts" 
+          class="border-none outline-none w-32"
+        >
+        <button type="submit" class="ml-1 text-gray-500 hover:text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </button>
+      </form>
+      
+      <a routerLink="/posts/new" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded">
+        Create Blog Post
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,27 @@
+mat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mat-mdc-card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom styles for the search field */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+/* Make sure pagination controls are responsive */
+.mat-mdc-paginator {
+  width: 100%;
+  background: transparent;
+}
