@@ -1,0 +1,48 @@
+/* Global styles for the blog application */
+
+/* Header styles */
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header a {
+  transition: all 0.3s ease;
+}
+
+/* Main content area */
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+}
+
+/* Material overrides */
+.mat-mdc-card {
+  border-radius: 8px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mat-mdc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom button styles */
+.mat-mdc-raised-button.mat-primary {
+  background-color: #4f46e5;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  background-color: #4338ca;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
