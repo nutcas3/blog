@@ -1,43 +1,48 @@
 # Project blog-backend
 
-One Paragraph of project description goes here
+This is the Go backend for the Blog application, providing a REST API for managing blog posts and users.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## MakeFile
+See [`../docs/RUNNING_FULLSTACK.md`](../docs/RUNNING_FULLSTACK.md) for how to run both backend and frontend together.
 
-Run build make command with tests
+### Requirements
+
+- Go 1.20+ (or your version)
+- Docker (for database container)
+- Make
+
+### Makefile Commands
+
+- **Build and test everything:**  
+  `make all`
+- **Build the backend:**  
+  `make build`
+- **Run the backend:**  
+  `make run`
+- **Start the DB container:**  
+  `make docker-run`
+- **Shutdown DB container:**  
+  `make docker-down`
+- **Integration tests:**  
+  `make itest`
+
+### Environment
+
+- Copy `.env.example` to `.env` and edit as needed.
+- Default backend runs on `http://localhost:8080`.
+
+### Example API Call
+
 ```bash
-make all
+curl http://localhost:8080/api/posts
 ```
 
-Build the application
-```bash
-make build
-```
+---
 
-Run the application
-```bash
-make run
-```
-Create DB container
-```bash
-make docker-run
-```
-
-Shutdown DB Container
-```bash
-make docker-down
-```
-
-DB Integrations Test:
-```bash
-make itest
-```
-
-Live reload the application:
+For more details on running the full stack, see [`../docs/RUNNING_FULLSTACK.md`](../docs/RUNNING_FULLSTACK.md).
 ```bash
 make watch
 ```
