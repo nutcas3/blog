@@ -2,6 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
+## Running the Blog Application (Full Stack)
+
+This project is part of a full-stack blog application with a Go backend and an Angular frontend.
+
+### 1. Start the Backend (blog-backend)
+
+Open a terminal and run the following commands from the `blog-backend` directory:
+
+```bash
+make build         # Build the backend
+make docker-run    # Start the database (if needed)
+make run           # Start the backend server (default: http://localhost:8080)
+```
+
+### 2. Start the Frontend (blog-frontend)
+
+Open another terminal and run the following commands from the `blog-frontend` directory:
+
+```bash
+npm install        # Install dependencies (only needed once)
+ng serve           # Start the Angular dev server (http://localhost:4200)
+```
+
+The frontend will connect to the backend at `http://localhost:8080` by default.
+
+---
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
