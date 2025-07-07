@@ -4,18 +4,38 @@
     <h2 class="text-2xl font-bold mb-2">The Accessibility Blog</h2>
     <p class="text-sm text-gray-600 mb-6">The world of the included</p>
     
-    <!-- Search Results Indicator -->
-    <div *ngIf="isSearching && !isLoading" class="flex items-center mb-4 bg-blue-50 p-2 rounded">
-      <span class="mr-2">Search results for: <strong>"{{ searchQuery }}"</strong></span>
+    <!-- Search Heading -->
+    <div class="text-center mb-6" *ngIf="isSearching && !isLoading">
+      <h1 class="text-3xl font-bold mb-4">Search Blogs</h1>
+      <div class="max-w-md mx-auto relative">
+        <input 
+          type="text" 
+          [(ngModel)]="searchQuery"
+          (keyup.enter)="searchPosts()"
+          class="w-full border rounded-md py-2 px-4 pr-10" 
+          placeholder="Text"
+        >
+        <button 
+          (click)="searchPosts()"
+          class="absolute right-2 top-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="mt-4 text-gray-700">Showing {{ posts.length }} Results of "{{ searchQuery }}"</p>
+    </div>
+    
+    <!-- Clear Search Button -->
+    <div *ngIf="isSearching && !isLoading" class="flex justify-center mb-4">
       <button 
         (click)="clearSearch()" 
-        class="ml-auto text-sm bg-white hover:bg-gray-100 text-gray-800 py-1 px-2 rounded border border-gray-300 flex items-center"
+        class="text-sm bg-white hover:bg-gray-100 text-gray-800 py-1 px-3 rounded border border-gray-300 flex items-center"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" class="mr-1">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
           <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
-        Clear search
+        Clear search results
       </button>
     </div>
 
